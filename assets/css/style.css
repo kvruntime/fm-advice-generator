@@ -1,0 +1,132 @@
+/* TODO: 
+1 - download & import
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 800
+
+*/
+
+/* IMPORTS */
+
+/* VARIABLES */
+:root {
+	--grayish-Blue: hsl(217, 19%, 38%);
+	--dark-grayish-blue: hsl(217, 19%, 24%);
+	--dark-blue: hsl(218, 23%, 16%);
+	--light-cyan: hsl(193, 38%, 86%);
+	--neon-green: hsl(150, 100%, 66%);
+
+	--mobile-size: 375px;
+	--desktop-size: 1440px;
+}
+
+/* BOILERPLATE */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+/* TYPOGRAPHY */
+body {
+	background: var(--dark-blue);
+	font-family: 'Manrope', 'Roboto', sans-serif;
+	margin: 10px;
+	font-size: 28px;
+	height: 100vh;
+}
+
+main {
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: black;
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+p {
+	margin-top: 0;
+}
+
+picture,
+img,
+figure {
+	width: 100%;
+	margin: 0;
+}
+
+/* LAYOUTS */
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ADVICE-GENERATOR: ADVICEGEN */
+.advicegen {
+	border-radius: 20px;
+	max-width: 500px;
+	min-width: 340px;
+	background: var(--dark-grayish-blue);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: clamp(10px, 4vw, 20px);
+    margin: 0 .5rem;
+}
+
+.advicegen__heading {
+	color: var(--neon-green);
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 2px;
+    margin: 0;
+}
+
+.advicegen__quote {
+	color: var(--light-cyan);
+	text-align: center;
+    margin: 30px .5rem;
+}
+
+.advicegen__quote::before {
+	content: open-quote;
+}
+.advicegen__quote::after {
+	content: close-quote;
+}
+
+.advicegen__divider {
+	margin-bottom: 50px;
+	width: 80%;
+}
+
+.advicegen__dice {
+	width: 70px;
+    aspect-ratio: 1/1;
+	position: absolute;
+	padding: 5px;
+	background: var(--neon-green);
+	border-radius: 100%;
+    bottom: -35px;
+    transition: box-shadow .5s ease;
+}
+
+.advicegen__dice:hover {
+box-shadow: 0 0 20px var(--neon-green);
+}
+
+.advicegen__dice img {
+	width: 30px;
+	height: auto;
+}
